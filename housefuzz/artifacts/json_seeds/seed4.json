@@ -1,0 +1,17 @@
+{
+    "request": {
+        "method": "GET",
+        "prefix": "/",
+        "handler_name": "session_login.php",
+        "version": "1.1"
+    },
+    "header": {
+        "HOST": "192.168.0.50",
+        "Cookie": "uid=xhyxhy",
+        "Content-Length": "13"
+    },
+    "body": {
+        "test": "test"
+    },
+    "possible_type": "normal"
+}

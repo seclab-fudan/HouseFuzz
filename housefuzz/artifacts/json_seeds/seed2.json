@@ -1,0 +1,18 @@
+{
+    "request": {
+        "method": "POST",
+        "prefix": "/",
+        "handler_name": "",
+        "version": "1.1"
+    },
+    "header": {
+        "HOST": "10.0.0.90",
+        "SOAPACTION": "xhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhyxhy",
+        "Accept-Encoding": "gzip,defalte,sdch",
+        "Content-Length": "13"
+    },
+    "body": {
+        "test": "test111"
+    },
+    "possible_type": "normal"
+}

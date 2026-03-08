@@ -1,0 +1,4 @@
+config BR2_PACKAGE_NVRAM_FAKER
+	bool "nvram-faker"
+	help
+	  nvram-faker is a library that provides a fake NVRAM
