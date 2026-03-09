@@ -1,0 +1,6 @@
+set env AFL_MAIN_BIN=0
+set follow-fork-mode child
+set args -execve "/AFLplusplus/qemu_mode/qemuafl/afl-qemu-trace" /tmp/test/test_shell
+b qemu_execve
+b execve
+

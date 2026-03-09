@@ -1,0 +1,6 @@
+angr==9.2.102
+docker_py==1.10.6
+ipython==8.12.3
+networkx==2.8.4
+pyelftools==0.29
+r2pipe==1.6.0

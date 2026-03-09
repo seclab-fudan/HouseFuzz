@@ -1,0 +1,24 @@
+exec: /bin/dash, cmd:  sh -c /AFLplusplus/qemu_mode/qemuafl/test.sh
+exec: /AFLplusplus/qemu_mode/qemuafl/test.sh, cmd:  /AFLplusplus/qemu_mode/qemuafl/test.sh
+exec: /bin/dash, cmd:  sh -c /AFLplusplus/qemu_mode/qemuafl/test.sh
+exec: /AFLplusplus/qemu_mode/qemuafl/test.sh, cmd:  /AFLplusplus/qemu_mode/qemuafl/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /bin/dash, cmd:  sh -c /tmp/test/test.sh
+exec: /tmp/test/test.sh, cmd:  /tmp/test/test.sh
+exec: /tmp/test/test_simple, cmd:  /tmp/test/test_simple
+exec: /tmp/test/test_simple, cmd:  /tmp/test/test_simple

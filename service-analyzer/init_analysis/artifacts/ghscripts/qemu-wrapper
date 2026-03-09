@@ -1,0 +1,67 @@
+#!/greenhouse/busybox sh
+qemu_exec=/qemu-mips-static
+
+ORIG_ARGS=$@
+QEMUARGS=""
+EXECVEARG=""
+
+# parse qemu args to find the command
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -g|-L|-s|-cpu|-E|-U|-r|-B|-R|-d|-dfilter|-D|-p|-tracename|-trace)
+        QEMUARGS="$QEMUARGS $1"
+        QEMUARGS="$QEMUARGS $2"
+        shift
+        shift
+        ;;
+    -execve)
+        EXECVEARG="$2"
+        shift
+        shift
+        ;;
+    -0)
+        shift
+        shift
+        ;;
+    -pid)
+        START_PID=$2
+        shift
+        shift
+        ;;
+    -h|--help|-ponly|-hackbind|-hackproc|-hacksysinfo|-hackhouse|-singlestep|-strace|-seed|-version)
+        QEMUARGS="$QEMUARGS $1"
+        shift
+        ;;
+    *)
+        CMD=$1
+        shift
+        break
+        ;;
+  esac
+done
+
+if [ -z "$CMD" ]; then
+  echo "No command specified"
+  echo "ORIG_ARGS: $ORIG_ARGS"
+  exit 1
+fi
+
+if [ -f $CMD ]; then
+  BIN=$CMD
+else
+  BIN="$(/greenhouse/busybox which $CMD)"
+fi
+# CMD_NAME="$(/greenhouse/busybox basename $CMD)"
+INTERP_LINE="$(/greenhouse/busybox cat $BIN | /greenhouse/busybox head -n1)"
+
+case "$INTERP_LINE" in
+  ("#!"*)
+    # get the interpreter
+    INTERP=$(echo ${INTERP_LINE} | /greenhouse/busybox sed -e 's/#!//')
+    CMD=$(echo ${INTERP} | /greenhouse/busybox cut -d' ' -f1)
+    exec $qemu_exec -0 ${CMD} -execve "${EXECVEARG}" ${QEMUARGS} ${INTERP} ${BIN} "$@"
+    ;;
+  (*)
+    exec $qemu_exec -0 ${CMD} -execve "${EXECVEARG}" ${QEMUARGS} ${BIN} "$@"
+    ;;
+esac

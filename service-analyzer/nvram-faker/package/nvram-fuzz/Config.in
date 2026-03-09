@@ -1,0 +1,4 @@
+config BR2_PACKAGE_NVRAM_FUZZ
+	bool "nvram-fuzz"
+	help
+	  nvram-fuzz is a library that provides a fake NVRAM for HouseFuzz
